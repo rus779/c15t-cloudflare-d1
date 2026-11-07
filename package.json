@@ -1,0 +1,30 @@
+{
+  "name": "c15t-cloudflare-d1",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=26.13.0"
+  },
+  "scripts": {
+    "build": "esbuild src/browser.ts --bundle --format=esm --target=es2022 --minify --outfile=public/assets/consent.js",
+    "dev": "npm run build && wrangler dev --local",
+    "check": "tsc --noEmit && node --test",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@c15t/browser": "3.2.2",
+    "@c15t/core": "3.2.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261107.1",
+    "esbuild": "0.28.2",
+    "typescript": "6.0.3",
+    "wrangler": "4.157.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261103.1": true
+  }
+}

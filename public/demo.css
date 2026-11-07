@@ -1,0 +1,27 @@
+:root {
+  color-scheme: light dark;
+  font: 1.125rem/1.6 system-ui, sans-serif;
+}
+
+main {
+  max-width: 38rem;
+  margin: clamp(2rem, 12vh, 8rem) auto;
+  padding: 0 1.25rem;
+}
+
+h1 {
+  line-height: 1.15;
+  margin: 0.25em 0;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+button {
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}

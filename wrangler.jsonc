@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "c15t-consent-demo",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-08",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "CONSENT_DB",
+      "database_name": "c15t-consent-demo",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
